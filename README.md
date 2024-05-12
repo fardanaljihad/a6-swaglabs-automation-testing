@@ -17,7 +17,7 @@ Berikut adalah struktur direktori untuk program Selenium dan Cucumber menggunaka
 ## How to run Program
 1. Clone Project
 ```shell
-git clone https://github.com/fardanaljihad/selenium-cucumber-login.git
+git clone https://github.com/SetiaBudii/webautomationtesting.git
 ```
 2. Open Project on IDE
 3. Open the terminal by pressing Ctrl + Shift + ~.
