@@ -9,21 +9,26 @@ Program ini adalah proyek sederhana yang menampilkan penggunaan Selenium dan Cuc
 Berikut adalah struktur direktori untuk program Selenium dan Cucumber menggunakan Maven.
 
 ## Prerequisites
-1. Install Java (JDK)
+
+1. Install Java (JDK). Java 8+.
 2. Install Maven
 3. Install WebDriver (ChromeDriver, GeckoDriver, dll.)
 4. Install IDE (contoh: Visual Studio Code)
 
 ## How to run Program
+
 1. Clone Project
+
 ```shell
 git clone https://github.com/SetiaBudii/webautomationtesting.git
 ```
+
 2. Open Project on IDE
-3. Open the terminal by pressing Ctrl + Shift + ~.
-4. Command to run all test cases: mvn test.
-5. Command for generating project report: mvn site.
-6. Command to generate a test report: mvn surefire-report:report.
+3. Open the terminal by pressing `Ctrl + Shift + ~`.
+4. Command to run all test cases: `mvn test`.
+5. Command to run a specific test case: `mvn test -Dcucumber.filter.name="[scenario]"`.
+6. Command for generating project report: `mvn site`.
+7. Command to generate a test report: `mvn surefire-report:report`.
 
 ## List Features (Cucumber)
 
@@ -44,7 +49,25 @@ Scenario: Unsuccessful login with invalid credentials
   And I click the login button
   Then I should see an error message "Epic sadface: Username and password do not match any user in this service"
 ```
+
+```shell
+Scenario: Unsuccessful login with invalid credentials. It is username not registered.
+  Given I am on the login page
+  When I enter username "standard_user123" and password "secret_sauce"
+  And I click the login button
+  Then I should see an error message "Epic sadface: Username and password do not match any user in this service"
+```
+
+```shell
+Scenario: Unsuccessful login with invalid credentials. It is empty username field.
+  Given I am on the login page
+  When I enter username "" and password "invalid_password"
+  And I click the login button
+  Then I should see an error message "Epic sadface: Username is required"
+```
+
 ## Authors
+
 - Fardan Al Jihad
 - M. Naufal Al Ghani
 - Yayang Setia Budi
