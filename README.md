@@ -66,6 +66,16 @@ Scenario: Unsuccessful login with invalid credentials. It is empty username fiel
   Then I should see an error message "Epic sadface: Username is required"
 ```
 
+### Logout Functionality
+
+```shell
+Scenario: Successful logout
+  Given I am on the dashboard page
+  When I open the menu
+  And I click the logout button
+  Then I should be logged out successfully
+```
+
 ## Authors
 
 - Fardan Al Jihad
