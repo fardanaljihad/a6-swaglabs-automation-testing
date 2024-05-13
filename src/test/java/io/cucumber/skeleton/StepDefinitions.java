@@ -58,25 +58,40 @@ public class StepDefinitions {
 
     @Given("I am on the dashboard page")
     public void i_am_on_the_dashboard_page() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/tools/chromedriver.exe");
+        System.setProperty("webdriver.http.factory", "jdk-http-client");
+        
+        driver = new ChromeDriver();
+        driver.get("https://www.saucedemo.com/");
+
+        WebElement usernameField = driver.findElement(By.id("user-name"));
+        WebElement passwordField = driver.findElement(By.id("password"));
+
+        usernameField.sendKeys("standard_user");
+        passwordField.sendKeys("secret_sauce");
+
+        WebElement loginButton = driver.findElement(By.id("login-button"));
+        loginButton.click();
     }
 
     @When("I open the menu")
     public void i_open_the_menu() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        WebElement menuButton = driver.findElement(By.id("react-burger-menu-btn"));
+        menuButton.click();
     }
 
     @When("I click the logout button")
     public void i_click_the_logout_button() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        WebElement logoutButton = driver.findElement(By.id("logout_sidebar_link"));
+        logoutButton.click();
     }
-    
+
     @Then("I should be logged out successfully")
     public void i_should_be_logged_out_successfully() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        String expectedUrl = "https://www.saucedemo.com/";
+        String actualUrl = driver.getCurrentUrl();
+        assertEquals(expectedUrl, actualUrl);
+
+        driver.quit();
     }
 }
