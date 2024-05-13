@@ -55,4 +55,28 @@ public class StepDefinitions {
 
         driver.quit();
     }
+
+    @Given("I am on the dashboard page")
+    public void i_am_on_the_dashboard_page() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+    @When("I open the menu")
+    public void i_open_the_menu() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+    @When("I click the logout button")
+    public void i_click_the_logout_button() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    
+    @Then("I should be logged out successfully")
+    public void i_should_be_logged_out_successfully() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
 }
