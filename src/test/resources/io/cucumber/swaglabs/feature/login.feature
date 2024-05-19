@@ -1,13 +1,14 @@
 Feature: Login Functionality
 
-  Scenario: Successful login
+  Background:
     Given I am on the login page
+
+  Scenario: Successful login
     When I enter username "standard_user" and password "secret_sauce"
     And I click the login button
     Then I should be logged in successfully
 
   Scenario: Unsuccessful login with invalid credentials
-    Given I am on the login page
     When I enter username "<username>" and password "<password>"
     And I click the login button
     Then I should see an error message "<message>"
