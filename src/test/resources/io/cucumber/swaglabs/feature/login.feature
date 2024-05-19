@@ -15,8 +15,8 @@ Feature: Login Functionality
 
     Examples:
     | username         | password         | message                                                                   |
-    | invalid_user     | invalid_password | Epic sadface: Username and password do not match any user in this service |
-    | standard_user123 | secret_sauce     | Epic sadface: Username and password do not match any user in this service |
-    |                  | invalid_password | Epic sadface: Username is required                                        |
-    | standard_user123 |                  | Epic sadface: Password is required                                        |
-    |                  |                  | Epic sadface: Username is required                                        |
+    | invalid_user     | invalid_password | Username and password do not match any user in this service !             |
+    | standard_user123 | secret_sauce     | Username and password do not match any user in this service !             |
+    |                  | invalid_password | You need Username !                                                       |
+    | standard_user123 |                  | You need Password !                                                       |
+    |                  |                  | You need Username and Password !                                          | 
