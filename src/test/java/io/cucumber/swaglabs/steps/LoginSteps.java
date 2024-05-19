@@ -6,10 +6,14 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.swaglabs.pages.LoginPage;
+// import io.cucumber.swaglabs.pages.LoginPage;
+import io.cucumber.swaglabs.pages.actions.loginActions;
+// import io.cucumber.swaglabs.steps.Hooks;
+
 
 public class LoginSteps {
-  LoginPage objLoginPage = new LoginPage(Hooks.driver);
+  // LoginPage objLoginPage = new LoginPage(Hooks.driver);
+  loginActions objLoginPage = new loginActions(Hooks.driver);
 
   @Given("I am on the login page")
   public void iAmOnTheLoginPage() {
