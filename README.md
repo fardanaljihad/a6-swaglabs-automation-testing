@@ -10,7 +10,7 @@ Berikut adalah struktur direktori untuk program Selenium dan Cucumber menggunaka
 
 ## Prerequisites
 
-1. Install Java (JDK). Java 8+.
+1. Install Java (JDK), Java 8+.
 2. Install Maven
 3. Install WebDriver (ChromeDriver, GeckoDriver, dll.)
 4. Install IDE (contoh: Visual Studio Code)
